@@ -8,6 +8,7 @@ var git = 0;
 var pw = false;
 var commands = [];
 
+// Inicializa
 setTimeout(function () {
   loopLines(banner, "", 80);
   textarea.focus();
@@ -19,6 +20,7 @@ window.addEventListener("keyup", enterKey);
 textarea.value = "";
 command.innerHTML = textarea.value;
 
+// Tecla Enter
 function enterKey(e) {
   if (e.keyCode == 181) {
     document.location.reload(true);
@@ -27,7 +29,7 @@ function enterKey(e) {
   if (e.keyCode == 13) {
     commands.push(command.innerHTML);
     git = commands.length;
-    addLine("[ivo@vegedra]~$" + command.innerHTML, "no-animation", 0);
+    addLine("[visitante@ivo]~$" + command.innerHTML, "no-animation", 0);
     commander(command.innerHTML.toLowerCase());
     command.innerHTML = "";
     textarea.value = "";
@@ -57,6 +59,12 @@ function commander(cmd) {
       loopLines(aboutme, "color2 margin", 80);
       break;
 
+    case "ivofetch":
+      document.getElementById("ivofetchDiv").style.display = "block";
+      break;
+
+    case "fetchivo":
+    case "neofetch":
     case "social":
       loopLines(social, "color2 margin", 80);
       break;
@@ -64,11 +72,21 @@ function commander(cmd) {
     case "projects":
       loopLines(projects, "color2 margin", 80);
       break;
+
+    case "others":
+      loopLines(others, "color2 margin", 80);
+      break;
+
+    case "skills":
+      loopLines(skills, "color2 margin", 80);
+      break;
+
     case "history":
       addLine("<br>", "", 0);
       loopLines(commands, "color2", 80);
       addLine("<br>", "command", 80 * commands.length + 50);
       break;
+
     case "email":
       addLine(
         'Opening mailto:<a href="mailto:pedroivo0513@gmail.com"> pedroivo0513@gmail.com</a>...',
@@ -79,6 +97,7 @@ function commander(cmd) {
       break;
       newTab(email);
       break;
+
     case "clear":
       setTimeout(function () {
         terminal.innerHTML =
@@ -86,9 +105,11 @@ function commander(cmd) {
         before = document.getElementById("before");
       }, 1);
       break;
+
     case "banner":
       loopLines(banner, "", 80);
       break;
+
     // socials
     case "linkedin":
       addLine("Abrindo LinkedIn...", "color2", 0);
@@ -102,13 +123,35 @@ function commander(cmd) {
       addLine("Abrindo GitHub...", "color2", 0);
       newTab(github);
       break;
+    case "musicas":
+      addLine("Abrindo Link...", "color2", 0);
+      newTab(musica);
+      break;
+    case "jogos":
+      addLine("Abrindo Itch.io...", "color2", 0);
+      newTab(jogos);
+      break;
+    
+    // Outros
     case "sudo":
       addLine("Infelizmente você não é um admin...", "color2", 0);
       break;
+
+    case "oi":
+    case "ola":
+      addLine("Olá!", "color2", 0);
+      break;
+
+    case "rm -rf /":
+    case "remove":
+    case "deletar":
+    case "delete":
+        addLine("Tem certeza que quer apagar tudo? 😱 Deu tanto trabalho fazer esse site...", "color2", 0);
+        break;
+
     default:
       addLine(
         '<span class="inherit">Comando não encontrado.',
-        "error",
         100,
       );
       break;
