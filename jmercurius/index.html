@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aplicação ERP jMercurius por Pedro Ivo" />
+    <title>jMercurius</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+  <body>
+    <a class="skip-link" href="#main">pular para o conteúdo</a>
+
+    <svg style="display: none">
+      <symbol id="mark" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="34" style="fill:none;stroke:currentColor;stroke-width:2.4"/>
+        <path d="M50 4 V96 M4 50 H96" style="stroke:currentColor;stroke-width:2.4"/>
+      </symbol>
+
+      <symbol id="menu" viewBox="0 0 50 50">
+        <rect style="stroke-width:0;fill:currentColor" height="6" width="50" y="2" x="0"/>
+        <rect style="stroke-width:0;fill:currentColor" height="6" width="50" y="22" x="0"/>
+        <rect style="stroke-width:0;fill:currentColor" height="6" width="50" y="42" x="0"/>
+      </symbol>
+
+      <symbol id="doc" viewBox="0 0 35 45">
+        <g transform="translate(-147.53 -539.83)">
+          <path style="stroke:currentColor;stroke-width:2.4501;fill:none" d="m149.38 542.67v39.194h31.354v-39.194z"/>
+          <g style="stroke-width:25" transform="matrix(.098003 0 0 .098003 133.69 525.96)">
+            <path d="m220 252.36h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+            <path style="stroke:currentColor;stroke-width:25;fill:none" d="m220 409.95h200"/>
+            <path d="m220 488.74h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+            <path d="m220 331.15h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
+          </g>
+        </g>
+      </symbol>
+
+      <symbol id="tick" viewBox="0 0 177.16535 177.16535">
+        <g transform="translate(0 -875.2)">
+          <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
+          <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
+        </g>
+      </symbol>
+    </svg>
+
+    <div class="wrapper">
+      <header class="intro-and-nav" role="banner">
+        <div>
+          <div class="intro">
+            <a class="logo" href="#" aria-label="jMercurius — página inicial">
+			  <span class="logo-mark" aria-hidden="true">
+				<img src="logo.png" alt="Logotipo" width="100" height="100">
+			  </span>
+			  <span class="logo-word">jMercurius</span>
+			</a>
+            <p class="library-desc">
+              <h5>v1.0.4</h5>
+            </p>
+          </div>
+
+          <nav id="patterns-nav" class="patterns" role="navigation">
+            <h2 class="vh">Navegação principal</h2>
+            <button id="menu-button" aria-expanded="false">
+              <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+                <use xlink:href="#menu"></use>
+              </svg>
+              Menu
+            </button>
+
+            <ul id="patterns-list">
+              <li class="pattern">
+                <a href="/" aria-current="page">
+                  <span class="text">Início</span>
+                </a>
+              </li>
+              <li class="pattern">
+                <a href="#recursos">
+                  <span class="text">Recursos</span>
+                </a>
+              </li>
+              <li class="pattern">
+                <a href="#modulos">
+                  <span class="text">Módulos</span>
+                </a>
+              </li>
+              <li class="pattern">
+                <a href="#contato">
+                  <span class="text">Contato</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="main-and-footer">
+        <div>
+          <main id="main">
+            <section class="hero">
+              <h1>O que é o jMercurius?</h1>
+			  <p>O jMercurius é um aplicativo desktop desenvolvido para auxiliar empresas de pequeno porte em diferentes tarefas, como a gestão de estoque e geração de orçamentos e pedidos.</p>
+              <p>Controle de clientes, tabelas de preço, pedidos e financeiro em um único lugar, offline e sem depender de planilha solta ou papel.</p>
+
+              <p>Construído em Java com Swing, utiliza banco de dados embutido e segue uma arquitetura MVC enxuta.</p>
+            </section>
+
+            <section id="recursos" class="features">
+              <h2>Recursos</h2>
+              <ul class="feature-list">
+                <li>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 177.16535 177.16535"><use xlink:href="#tick"></use></svg>
+                  <div>
+                    <h3>Cadastros unificados</h3>
+                    <p>Clientes, tabelas de preço e pedidos em uma só aba.</p>
+                  </div>
+				  <img src="print-cadastro.png" alt="Print do módulo financeiro" class="feature-print">
+                </li>
+                <li>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 177.16535 177.16535"><use xlink:href="#tick"></use></svg>
+                  <div>
+                    <h3>Painel e relatórios</h3>
+                    <p>Dashboard com gráficos e atualização automática, além de relatórios em cinco abas com exportação para Excel e PDF.</p>
+                  </div>
+				  <img src="print-relatorio.png" alt="Print do módulo financeiro" class="feature-print">
+                </li>
+                <li>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 177.16535 177.16535"><use xlink:href="#tick"></use></svg>
+                  <div>
+                    <h3>Exportação de documentos</h3>
+                    <p>Pipeline de exportação para gerar pedidos e relatórios em PDF e Excel prontos para impressão.</p>
+                  </div>
+				  <img src="print-exportacao.png" alt="Print do módulo financeiro" class="feature-print">
+                </li>
+                <li>
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 177.16535 177.16535"><use xlink:href="#tick"></use></svg>
+                  <div>
+                    <h3>Financeiro por competência</h3>
+                    <p>Lançamentos organizados em abas mensais, com resumo de saldo e acompanhamento do fluxo de caixa.</p>
+                  </div>
+				  <img src="print-financeiro.png" alt="Print do módulo financeiro" class="feature-print">
+                </li>
+              </ul>
+			  <br>
+            </section>
+
+            <section id="modulos" class="modules">
+              <h2>Módulos</h2>
+              <div class="module-grid">
+                <article class="module-card">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 35 45"><use xlink:href="#doc"></use></svg>
+                  <h3>Pedidos</h3>
+                  <p>Status, decremento de estoque e resolução de preço automáticos a cada etapa do pedido.</p>
+                </article>
+                <article class="module-card">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 35 45"><use xlink:href="#doc"></use></svg>
+                  <h3>Financeiro</h3>
+                  <p>Lançamentos mensais e balanço consolidado, sempre visível no painel principal.</p>
+                </article>
+                <article class="module-card">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 35 45"><use xlink:href="#doc"></use></svg>
+                  <h3>Configurações da empresa</h3>
+                  <p>Definição de logo, cores, rodapé de PDF e linha de assinatura personalizáveis por empresa.</p>
+                </article>
+              </div>
+            </section>
+          </main>
+
+          <footer id="contato" role="contentinfo">
+			  <div class="footer-row">
+				<div class="footer-info">
+				  <p>jMercurius © 2026 Pedro Ivo Rocha. Todos os direitos reservados.</p>
+				  <p>
+					Email:
+					<a href="mailto:pedroivo0513@gmail.com">
+					  pedroivo0513@gmail.com
+					</a>
+				  </p>
+				</div>
+
+				<label for="themer">
+				  tema escuro:
+				  <input type="checkbox" id="themer" class="vh">
+				  <span aria-hidden="true"></span>
+				</label>
+			  </div>
+			</footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
