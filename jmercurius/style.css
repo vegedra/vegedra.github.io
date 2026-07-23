@@ -451,3 +451,70 @@ body:has(#themer:checked) .module-card p,
 body:has(#themer:checked) .changelog p {
   color: #a9a49a;
 }
+
+/* download */
+.download {
+  margin-top: 2rem;
+}
+
+.download p {
+  color: var(--ink-soft);
+  max-width: 50ch;
+  margin: 0.8rem 0 0;
+}
+
+.download-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--paper-raised);
+  background: var(--press-blue);
+  padding: 0.3rem 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.notify-form {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.notify-form input[type="email"] {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.55rem 0.8rem;
+  border: 1.5px solid var(--rule);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.notify-form input[type="email"]:focus {
+  border-color: var(--press-blue);
+}
+
+.notify-form button {
+  padding: 0.55rem 1.1rem;
+  background: var(--press-blue);
+  color: #fff;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.notify-form button:hover {
+  background: var(--proof-cyan);
+}
+
+/* dark theme - download */
+body:has(#themer:checked) .notify-form input[type="email"] {
+  background: #1f2226;
+  color: #ece7dd;
+  border-color: rgba(236, 231, 221, 0.15);
+}
