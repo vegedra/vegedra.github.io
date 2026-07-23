@@ -83,10 +83,10 @@ a:hover { color: var(--register-red); }
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 
 .intro {
