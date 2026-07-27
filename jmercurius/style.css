@@ -518,3 +518,18 @@ body:has(#themer:checked) .notify-form input[type="email"] {
   color: #ece7dd;
   border-color: rgba(236, 231, 221, 0.15);
 }
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
