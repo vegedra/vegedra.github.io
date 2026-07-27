@@ -104,10 +104,11 @@ a:hover { color: var(--register-red); }
   color: var(--ink);
 }
 
+.logo-mark img,
 .logo-mark svg {
   width: 1.6rem;
   height: 1.6rem;
-  color: var(--register-red);
+  display: block;
 }
 
 .logo-word {
@@ -202,6 +203,18 @@ a:hover { color: var(--register-red); }
     z-index: 5;
   }
   #patterns-list.open { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .logo-word {
+    font-size: 1.7rem;
+  }
+  .intro-and-nav > div {
+    flex-wrap: wrap;
+  }
+  .intro {
+    gap: 0.5rem;
+  }
 }
 
 /* main */
