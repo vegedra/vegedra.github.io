@@ -519,17 +519,31 @@ body:has(#themer:checked) .notify-form input[type="email"] {
   border-color: rgba(236, 231, 221, 0.15);
 }
 
+/* vídeo de demonstração */
+.video-demo {
+  width: 100%;
+  margin: 0 0 2.5rem;
+  padding: 0;
+  border: 0;
+}
+
 .video-wrapper {
   position: relative;
   width: 100%;
   max-width: 800px;
   aspect-ratio: 16 / 9;
   margin: 0 auto;
+  overflow: hidden;
+  border: 0;
+  outline: 0;
 }
 
 .video-wrapper iframe {
+  display: block;
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
+  outline: 0;
 }
